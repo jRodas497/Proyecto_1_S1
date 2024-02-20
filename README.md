@@ -1,2 +1,4 @@
-# Proyecto_1_S1
-Proyecto 1 | IPC2 Sección A
+# *IPC2_Proyecto1_202200389*
+
+* *Juan José Rodas Mansilla*
+* *202200389*
