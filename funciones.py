@@ -1,6 +1,7 @@
 import os
 from Patron import Patron
 from Piso import Piso
+import xml.etree.cElementTree as ET
 
 listaPatrones = []
 

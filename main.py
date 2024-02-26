@@ -2,6 +2,7 @@ import xml.etree.cElementTree as ET
 from Piso import Piso
 from Patron import Patron
 import os
+import funciones as f
 
 class archivo:
     def __init__(self, archivo):
@@ -57,7 +58,12 @@ def menu():
             print("** ERROR **")
         menu()
     elif opcion == '2':
-        print('')
+        if arch.get_archivo() != "":
+            f.leer_xml(arch.get_archivo())
+        else:
+            print("** PRIMERO DEBES CARGAR UN ARCHIVO **")
+        
+        menu()
     elif opcion == '2':
         print('')
     elif opcion == '2':
