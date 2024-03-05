@@ -4,18 +4,6 @@ from Patron import Patron
 import os
 import funciones as f
 
-class archivo:
-    def __init__(self, archivo):
-        self.archivo = archivo
-
-    def set_archivo(self, archivo):
-        self.archivo = archivo
-
-    def get_archivo(self):
-        return self.archivo
-    
-arch = archivo("")
-
 def main():
     print("------------------------------------------------------")
     print("*** PROYECTO 1 -- INTRODUCCIÓN A LA PROGRAMACIÓN 2 ***")
@@ -45,24 +33,16 @@ def menu():
     print("")
     
     if opcion == "1":
-        nombre = input("INGRESE EL NOMBRE DEL ARCHIVO: ")
-        arch.set_archivo(nombre)
         try:
-            if os.path.exists(nombre+".xml") == False:
-                arch.set_archivo("")
-                print("** ARCHIVO NO ENCONTRADO **")
+            if os.path.exists('pisos.xml') == False:
+                print('** ARCHIVO NO ENCONTRADO **')
             else:
                 print(arch)
                 print("\n## ARCHIVO CARGADO CON EXITO ##")
         except:
             print("** ERROR **")
         menu()
-    elif opcion == '2':
-        if arch.get_archivo() != "":
-            f.leer_xml(arch.get_archivo())
-        else:
-            print("** PRIMERO DEBES CARGAR UN ARCHIVO **")
-        
+    elif opcion == '2':        
         menu()
     elif opcion == '2':
         print('')

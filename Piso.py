@@ -1,10 +1,13 @@
+from ListaAzulejos import ListaAzulejos
+from Patron import Patron
+
 class Piso:
-    def __init__(self, nombre, rows, colums, flip, switch, patrones):
+    def __init__(self, nombre, r, c, f, s, patrones):
         self.nombre = nombre
-        self.rows = rows
-        self.colums = colums
-        self.flip = flip
-        self.switch = switch
+        self.r = r
+        self.c = c
+        self.f = f
+        self.s = s
         self.patrones = patrones
         
     def __str__(self):  
